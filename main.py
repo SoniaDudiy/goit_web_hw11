@@ -1,12 +1,12 @@
 import time
-
+import uvicorn
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 from sqlalchemy import text
-from routes import search
+from src.routes import search
 
 from src.database.db import get_db
 from src.routes import contacts
